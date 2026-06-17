@@ -1116,6 +1116,21 @@
       &__list {
          flex-direction: row;
          flex-wrap: wrap;
+         justify-content: center;
+      }
+
+      &__item {
+         inline-size: 100%;
+      }
+   }
+
+   .card-news {
+      &__link {
+         inline-size: 100%;
+      }
+
+      &__content {
+         inline-size: 100%;
       }
    }
 
