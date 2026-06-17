@@ -1,0 +1,147 @@
+@use "sass:math";
+@use "_mixins.scss" as *;
+
+// ====ЗАГОТОВКА ХЕДЕР ОТ ЦЕНТРА==
+//    .menu__link {
+//       position: relative;
+//    }
+//    .menu__link::before {
+//       content: " ";
+//       position: absolute;
+//       block-size: toRem(2);
+//       inline-size: 0;
+//       background-color: #fff;
+//       inset-block-end: toRem(-5);
+//       inset-inline-start: 50%;
+//       will-change: transform, transleteX;
+//       transform: translateX(-50%);
+//       transition: inline-size 0.5s;
+//    }
+//    .menu__link:hover::before {
+//       inline-size: 100%;
+//    }
+
+// ====ЗАГОТОВКА ХЕДЕР ОТ КРАЯ==
+
+// .body-houses__link {
+//    position: relative;
+// }
+// .body-houses__link::before {
+//    content: " ";
+//    position: absolute;
+//    block-size: toRem(2);
+//    inline-size: 0;
+//    background-color: #000000;
+//    inset-block-end: toRem(-5);
+//    inset-inline-start: 0;
+//    transition: inline-size 0.5s;
+// }
+// .body-houses__link:hover::before {
+//    inline-size: 100%;
+// }
+
+//==========УБРАТЬ АРТЕФАКТ ПРИ SCALE====
+
+// .logo:hover {
+//    transform: translateZ(0) scale(1.1);
+// }
+
+// .logo {
+//    transform: translateZ(0) scale(1);
+//    transform-origin: center;
+//    will-change: transform;
+//    transition: transform 0.4s ease;
+// }
+
+//=======================================================================================================================================
+
+@media (any-hover: hover) and (any-pointer: fine) {
+   .menu__link:hover {
+      color: rgb(54, 54, 54);
+      &[aria-current="page"] {
+         color: #686868;
+      }
+   }
+
+   .hero__button:hover {
+      background-color: rgba(38, 38, 38, 0.8);
+   }
+
+   .card-news__link:hover .card-news__image {
+      transform: translateZ(0) scale(1.1);
+   }
+   .item-category__link:hover .item-category__title {
+      color: #ffffff;
+      background-color: #262626;
+   }
+   .item-category__link:hover .item-category__image {
+      transform: translateZ(0) scale(1.1);
+   }
+
+   .news-card__link:hover .news-card__image {
+      transform: translateZ(0) scale(1.1);
+   }
+
+   .slider-arrow:hover {
+      background-color: #262626;
+   }
+   .feature-news__link:hover,
+   .item-featured-news__link:hover {
+      &::after {
+         opacity: 0.3;
+      }
+   }
+
+   .swiper-pagination-btn:hover {
+      background-color: #262626a1;
+      color: #fff;
+   }
+
+   .item-articles__link:hover .item-articles__image {
+      transform: translateZ(0) scale(1.1);
+   }
+   .item-articles__link:hover .item-articles__title {
+      color: #686868;
+   }
+   .item-articles__link:hover .item-articles__text {
+      color: #262626;
+   }
+
+   .item-recent-news:hover .item-recent-news__image {
+      transform: translateZ(0) scale(1.1);
+   }
+   .card-recent-news:hover .card-recent-news__image {
+      transform: translateZ(0) scale(1.1);
+   }
+   .recent-news__button:hover {
+      color: #262626;
+      background-color: #e1e8f0;
+   }
+
+   .subscribe__button:hover {
+      background-color: #686868;
+      &::before {
+         transform: rotate(180deg);
+      }
+   }
+   .social-footer__link:hover {
+      background-color: #bab8b8;
+      &::before {
+         transform: translateZ(0) scale(1.1);
+         color: #262626;
+      }
+   }
+   .pages__link:hover:not(.pages__link--current) {
+      color: #262626;
+   }
+   .pages__link--icon-arrow:hover {
+      background-color: #262626;
+   }
+}
+
+//========================================================================================================================================
+
+@media (any-hover: none), (any-pointer: coarse) {
+}
+
+//=======================================================================================================================================

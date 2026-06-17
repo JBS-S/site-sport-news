@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=DM%20Sans:wght@400;500;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Sport News</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <a class="logo" href="index.html">Sport News</a>
+            <nav class="header__menu menu">
+               <ul class="menu__list">
+                  <li class="menu__item">
+                     <a class="menu__link" href="index.html" aria-current="page">Home</a>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link" href="#category">Category</a>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link" href="#trending-news">Trending News</a>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link" href="#recent-news">Recent News</a>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link" href="#clubs-ranking">Clubs Ranking</a>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link" href="#sports-article">Sports Article</a>
+                  </li>
+               </ul>
+            </nav>
+            <form class="search" action="#" method="get">
+               <label class="visually-hidden" for="search-input">Search</label>
+               <input class="search__input" id="search-input" type="search" name="form[]" placeholder="Search">
+               <button class="search__button search__button--icon-search" type="submit" aria-label="Search"> </button>
+            </form>
+            <button class="icon-menu" type="button" aria-label="Open menu">
+               <span></span>
+            </button>
+         </div>
+      </header>
+      <main class="page">
+         <section class="page__hero hero">
+            <div class="hero__container">
+               <div class="hero__main">
+                  <div class="hero__body">
+                     <h1 class="hero__title"> TOP SCORER TO THE FINAL MATCH </h1>
+                     <div class="hero__media">
+                        <img class="hero__image" src="img/hero/basketball-player.png" alt="Basketball player" loading="lazy">
+                     </div>
+                  </div>
+                  <div class="hero__content">
+                     <div class="hero__text">
+                        <p> The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                     </div>
+                     <a class="hero__button" href="#">Continue Reading</a>
+                  </div>
+               </div>
+               <aside class="hero__aside aside-hero">
+                  <h2 class="aside-hero__label">Today</h2>
+                  <ul class="aside-hero__list">
+                     <li class="aside-hero__item">
+                        <article class="card-news">
+                           <a class="card-news__link" href="#">
+                              <div class="card-news__picture">
+                                 <img class="card-news__image" src="img/hero/woman-running.webp" alt="Ethiopian runners " loading="lazy">
+                              </div>
+                              <div class="card-news__content">
+                                 <div class="card-news__meta">
+                                    <span class="card-news__category">Race98</span>
+                                    <time datetime="2023-06-03">03 June 2023</time>
+                                 </div>
+                                 <h3 class="card-news__title"> Ethiopian runners took the top four spots. </h3>
+                              </div>
+                           </a>
+                        </article>
+                     </li>
+                     <li class="aside-hero__item">
+                        <article class="card-news">
+                           <a class="card-news__link" href="#">
+                              <div class="card-news__picture">
+                                 <img class="card-news__image" src="img/hero/race-car.webp" alt="IndyCar Detroit race" loading="lazy">
+                              </div>
+                              <div class="card-news__content">
+                                 <div class="card-news__meta">
+                                    <span class="card-news__category">INDYCAR</span>
+                                    <time datetime="2023-06-03">03 June 2023</time>
+                                 </div>
+                                 <h3 class="card-news__title"> IndyCar Detroit: Dixon quickest in second practice </h3>
+                              </div>
+                           </a>
+                        </article>
+                     </li>
+                  </ul>
+               </aside>
+            </div>
+         </section>
+         <section id="category" class="page__category category">
+            <div class="category__container">
+               <h2 class="category__title title">Category</h2>
+               <ul class="category__list">
+                  <li class="category__item item-category">
+                     <a class="item-category__link" href="#">
+                        <h3 class="item-category__title">Football</h3>
+                        <figure class="item-category__picture">
+                           <img class="item-category__image" src="img/category/football.avif" alt="soccer ball in the goal" loading="lazy">
+                        </figure>
+                     </a>
+                  </li>
+                  <li class="category__item item-category">
+                     <a class="item-category__link" href="#">
+                        <h3 class="item-category__title">Bascketball</h3>
+                        <figure class="item-category__picture">
+                           <img class="item-category__image" src="img/category/basketball.avif" alt="close up basketball outdoors" loading="lazy">
+                        </figure>
+                     </a>
+                  </li>
+                  <li class="category__item item-category">
+                     <a class="item-category__link" href="#">
+                        <h3 class="item-category__title">Car sport</h3>
+                        <figure class="item-category__picture">
+                           <img class="item-category__image" src="img/category/car-sport.avif" alt="sport car is drifting  track with smoke around" loading="lazy">
+                        </figure>
+                     </a>
+                  </li>
+                  <li class="category__item item-category">
+                     <a class="item-category__link" href="#">
+                        <h3 class="item-category__title">Table Tennis</h3>
+                        <figure class="item-category__picture">
+                           <img class="item-category__image" src="img/category/table-tennis.avif" alt="red ping pong racket" loading="lazy">
+                        </figure>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section id="trending-news" class="page__top-news top-news">
+            <div class="top-news__container">
+               <div class="top-news__body">
+                  <div class="top-news__content">
+                     <h2 class="top-news__title title">Trending News</h2>
+                     <ul class="top-news__list">
+                        <li class="top-news__item">
+                           <article class="news-card">
+                              <a class="news-card__link" href="#">
+                                 <figure class="news-card__picture">
+                                    <img class="news-card__image" src="img/top-news/race-horse.webp" alt="horse racing" loading="lazy">
+                                 </figure>
+                                 <div class="news-card__content">
+                                    <div class="news-card__meta">
+                                       <span class="news-card__category">Race98</span>
+                                       <time datetime="2023-06-03">03 June 2023</time>
+                                    </div>
+                                    <h3 class="news-card__title">6-Year-Old Horse Dies at Belmont Park After Race Injury</h3>
+                                    <div class="news-card__text">
+                                       <p>NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s</p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </article>
+                        </li>
+                        <li class="top-news__item">
+                           <article class="news-card">
+                              <a class="news-card__link" href="#">
+                                 <figure class="news-card__picture">
+                                    <img class="news-card__image" src="img/top-news/cyclist.webp" alt="A cyclist leads the way while riding a bicycle on a racing road" loading="lazy">
+                                 </figure>
+                                 <div class="news-card__content">
+                                    <div class="news-card__meta">
+                                       <span class="news-card__category">Jony.Ls</span>
+                                       <time datetime="2023-06-03">03 June 2023</time>
+                                    </div>
+                                    <h3 class="news-card__title">Savilia Blunk Embraces Longer Season with World Cup</h3>
+                                    <div class="news-card__text">
+                                       <p>Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some</p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </article>
+                        </li>
+                        <li class="top-news__item">
+                           <article class="news-card">
+                              <a class="news-card__link" href="#">
+                                 <figure class="news-card__picture">
+                                    <img class="news-card__image" src="img/top-news/boxing-arena.webp" alt="empty boxing arena waiting new  round" loading="lazy">
+                                 </figure>
+                                 <div class="news-card__content">
+                                    <div class="news-card__meta">
+                                       <span class="news-card__category">King.F</span>
+                                       <time datetime="2023-06-03">03 June 2023</time>
+                                    </div>
+                                    <h3 class="news-card__title">Ryan Garcia is fighting again, this time on social media</h3>
+                                    <div class="news-card__text">
+                                       <p>Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on</p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </article>
+                        </li>
+                     </ul>
+                  </div>
+                  <article class="top-news__feature feature-news">
+                     <a class="feature-news__link" href="#">
+                        <div class="feature-news__label">Cycling</div>
+                        <figure class="feature-news__picture">
+                           <img class="feature-news__image" src="img/top-news/sportsman-drinking-water.webp" alt="sportsman drinking water training stationary bike" loading="lazy">
+                        </figure>
+                        <div class="feature-news__content">
+                           <div class="feature-news__meta">
+                              <span class="feature-news__category">Debits</span>
+                              <time datetime="2023-06-03">03 June 2023</time>
+                           </div>
+                           <h3 class="feature-news__title">DISCOVER THE MEMBER BENEFITS OF USA CYCLING!</h3>
+                        </div>
+                     </a>
+                  </article>
+               </div>
+            </div>
+         </section>
+         <section id="recent-news" class="page__featured-news featured-news">
+            <div class="featured-news__container">
+               <h2 class="visually-hidden">Featured news</h2>
+               <div class="featured-news__slider slider-featured-news swiper">
+                  <div class="slider-featured-news__wrapper swiper-wrapper">
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game " loading="lazy">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game " loading="lazy">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game " loading="lazy">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game " loading="lazy">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-featured-news__slide swiper-slide">
+                        <article class="item-featured-news">
+                           <a class="item-featured-news__link" href="#">
+                              <div class="item-featured-news__label">Football</div>
+                              <figure class="item-featured-news__picture">
+                                 <img class="item-featured-news__image" src="img/featured-news/players-give-handshake.webp" alt="two opposing players give handshake end game ">
+                              </figure>
+                              <div class="item-featured-news__content">
+                                 <div class="item-featured-news__meta">
+                                    <span class="item-featured-news__category">Agence France-Presse</span>
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-featured-news__title">Lionel Messi Leaving Ligue 1 Team Paris Saint-Germain, Club Confirms</h3>
+                                 <div class="item-featured-news__text">
+                                    <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                  </div>
+                  <div class="swiper-controls">
+                     <button class="slider-arrow slider-arrow--left  slider-arrow--icon-arrow" aria-label="Previous slide"></button>
+                     <div class="swiper-pagination">
+                        <button class="swiper-pagination-btn"></button>
+                        <button class="swiper-pagination-btn"></button>
+                        <button class="swiper-pagination-btn"></button>
+                        <button class="swiper-pagination-btn"></button>
+                     </div>
+                     <button class="slider-arrow slider-arrow--right slider-arrow--icon-arrow" aria-label="Next slide"></button>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="clubs-ranking" class="page__recent-news recent-news">
+            <div class="recent-news__container">
+               <div class="recent-news__layout">
+                  <h2 class="recent-news__title title">Recent News</h2>
+                  <h2 class="recent-news__sub-title title">Clubs Ranking</h2>
+                  <div class="recent-news__body">
+                     <article class="recent-news__item item-recent-news">
+                        <a href="#" class="item-recent-news__link">
+                           <figure class="item-recent-news__picture">
+                              <img class="item-recent-news__image" src="img/recent-news/karate-fighters.webp" alt="a man in a white kimano" loading="lazy">
+                           </figure>
+                           <div class="item-recent-news__content">
+                              <div class="item-recent-news__meta">
+                                 <span class="item-recent-news__category">Day 5 Highlights</span>
+                              </div>
+                              <h3 class="item-recent-news__sub-title"> Baku 2023 World Taekwondo Championships </h3>
+                           </div>
+                        </a>
+                     </article>
+                     <div class="recent-news__list-wrapper">
+                        <ul class="recent-news__list">
+                           <li class="recent-news__item">
+                              <article class="recent-news__card card-recent-news">
+                                 <a class="card-recent-news__link" href="#">
+                                    <div class="card-recent-news__picture">
+                                       <img class="card-recent-news__image" src="img/recent-news/item-news-card-image-1.webp" alt="" loading="lazy">
+                                    </div>
+                                    <div class="card-recent-news__body">
+                                       <div class="card-recent-news__meta">
+                                          <span class="card-recent-news__category">#Pollar</span>
+                                          <time datetime="2023-06-12">12 June 2023</time>
+                                       </div>
+                                       <h3 class="card-recent-news__title">Baku 2023 Taekwondo Championships</h3>
+                                    </div>
+                                 </a>
+                              </article>
+                           </li>
+                           <li class="recent-news__item">
+                              <article class="recent-news__card card-recent-news">
+                                 <a class="card-recent-news__link" href="#">
+                                    <div class="card-recent-news__picture">
+                                       <img class="card-recent-news__image" src="img/recent-news/item-news-card-image-2.webp" alt="" loading="lazy">
+                                    </div>
+                                    <div class="card-recent-news__body">
+                                       <div class="card-recent-news__meta">
+                                          <span class="card-recent-news__category">#Golf</span>
+                                          <time datetime="2023-06-20">20 June 2023</time>
+                                       </div>
+                                       <h3 class="card-recent-news__title">Open Championship Royal Liverpool Golf</h3>
+                                    </div>
+                                 </a>
+                              </article>
+                           </li>
+                           <li class="recent-news__item">
+                              <article class="recent-news__card card-recent-news">
+                                 <a class="card-recent-news__link" href="#">
+                                    <div class="card-recent-news__picture">
+                                       <img class="card-recent-news__image" src="img/recent-news/item-news-card-image-3.webp" alt="" loading="lazy">
+                                    </div>
+                                    <div class="card-recent-news__body">
+                                       <div class="card-recent-news__meta">
+                                          <span class="card-recent-news__category">#Cricket</span>
+                                          <time datetime="2023-06-27">27 June 2023</time>
+                                       </div>
+                                       <h3 class="card-recent-news__title">Ireland Tour of England Test 2023</h3>
+                                    </div>
+                                 </a>
+                              </article>
+                           </li>
+                        </ul>
+                        <button class="recent-news__button recent-news__button--icon-arrow" type="button">More</button>
+                     </div>
+                  </div>
+                  <div class="recent-news__ranking ranking">
+                     <table class="table-ranking">
+                        <thead>
+                           <tr>
+                              <th class="table-ranking__cell table-ranking__cell--club" colspan="2">Club</th>
+                              <th class="table-ranking__cell">GP</th>
+                              <th class="table-ranking__cell">W</th>
+                              <th class="table-ranking__cell">D</th>
+                              <th class="table-ranking__cell">L</th>
+                              <th class="table-ranking__cell">F</th>
+                              <th class="table-ranking__cell">A</th>
+                              <th class="table-ranking__cell">GD</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="table-ranking__row">
+                              <th class="table-ranking__cell table-ranking__cell--position" scope="row">1</th>
+                              <td class="table-ranking__cell table-ranking__cell--club">
+                                 <span class="table-ranking__team"> <img class="table-ranking__logo" src="img/recent-news/clubs/ms.svg" alt="Manchester City logo" loading="lazy"> Manchester City </span>
+                              </td>
+                              <td class="table-ranking__cell" data-label="GP">38</td>
+                              <td class="table-ranking__cell" data-label="W">29</td>
+                              <td class="table-ranking__cell" data-label="D">6</td>
+                              <td class="table-ranking__cell" data-label="L">3</td>
+                              <td class="table-ranking__cell" data-label="F">99</td>
+                              <td class="table-ranking__cell" data-label="A">26</td>
+                              <td class="table-ranking__cell" data-label="GD">73</td>
+                           </tr>
+                           <tr class="table-ranking__row">
+                              <th class="table-ranking__cell table-ranking__cell--position" scope="row">2</th>
+                              <td class="table-ranking__cell table-ranking__cell--club">
+                                 <span class="table-ranking__team"> <img class="table-ranking__logo" src="img/recent-news/clubs/lv.svg" alt="Liverpool logo" loading="lazy">Liverpool</span>
+                              </td>
+                              <td class="table-ranking__cell" data-label="GP">38</td>
+                              <td class="table-ranking__cell" data-label="W">28</td>
+                              <td class="table-ranking__cell" data-label="D">8</td>
+                              <td class="table-ranking__cell" data-label="L">2</td>
+                              <td class="table-ranking__cell" data-label="F">94</td>
+                              <td class="table-ranking__cell" data-label="A">26</td>
+                              <td class="table-ranking__cell" data-label="GD">68</td>
+                           </tr>
+                           <tr class="table-ranking__row">
+                              <th class="table-ranking__cell table-ranking__cell--position" scope="row">3</th>
+                              <td class="table-ranking__cell table-ranking__cell--club">
+                                 <span class="table-ranking__team"> <img class="table-ranking__logo" src="img/recent-news/clubs/cl.svg" alt="Chelsea logo" loading="lazy">Chelsea</span>
+                              </td>
+                              <td class="table-ranking__cell" data-label="GP">38</td>
+                              <td class="table-ranking__cell" data-label="W">28</td>
+                              <td class="table-ranking__cell" data-label="D">11</td>
+                              <td class="table-ranking__cell" data-label="L">6</td>
+                              <td class="table-ranking__cell" data-label="F">76</td>
+                              <td class="table-ranking__cell" data-label="A">33</td>
+                              <td class="table-ranking__cell" data-label="GD">43</td>
+                           </tr>
+                           <tr class="table-ranking__row">
+                              <th class="table-ranking__cell table-ranking__cell--position" scope="row">4</th>
+                              <td class="table-ranking__cell table-ranking__cell--club">
+                                 <span class="table-ranking__team"> <img class="table-ranking__logo" src="img/recent-news/clubs/th.svg" alt="Tottenham Hotspur logo" loading="lazy">Tottenham Hotspur</span>
+                              </td>
+                              <td class="table-ranking__cell" data-label="GP">38</td>
+                              <td class="table-ranking__cell" data-label="W">21</td>
+                              <td class="table-ranking__cell" data-label="D">5</td>
+                              <td class="table-ranking__cell" data-label="L">11</td>
+                              <td class="table-ranking__cell" data-label="F">69</td>
+                              <td class="table-ranking__cell" data-label="A">40</td>
+                              <td class="table-ranking__cell" data-label="GD">29</td>
+                           </tr>
+                           <tr class="table-ranking__row">
+                              <th class="table-ranking__cell table-ranking__cell--position" scope="row">5</th>
+                              <td class="table-ranking__cell table-ranking__cell--club">
+                                 <span class="table-ranking__team"> <img class="table-ranking__logo" src="img/recent-news/clubs/ar.svg" alt="Arsenal logo" loading="lazy">Arsenal</span>
+                              </td>
+                              <td class="table-ranking__cell" data-label="GP">38</td>
+                              <td class="table-ranking__cell" data-label="W">22</td>
+                              <td class="table-ranking__cell" data-label="D">3</td>
+                              <td class="table-ranking__cell" data-label="L">13</td>
+                              <td class="table-ranking__cell" data-label="F">61</td>
+                              <td class="table-ranking__cell" data-label="A">48</td>
+                              <td class="table-ranking__cell" data-label="GD">13</td>
+                           </tr>
+                           <tr class="table-ranking__row">
+                              <th class="table-ranking__cell table-ranking__cell--position" scope="row">6</th>
+                              <td class="table-ranking__cell table-ranking__cell--club">
+                                 <span class="table-ranking__team"> <img class="table-ranking__logo" src="img/recent-news/clubs/mu.svg" alt="Manchester United logo" loading="lazy">Manchester United</span>
+                              </td>
+                              <td class="table-ranking__cell" data-label="GP">38</td>
+                              <td class="table-ranking__cell" data-label="W">16</td>
+                              <td class="table-ranking__cell" data-label="D">10</td>
+                              <td class="table-ranking__cell" data-label="L">12</td>
+                              <td class="table-ranking__cell" data-label="F">57</td>
+                              <td class="table-ranking__cell" data-label="A">57</td>
+                              <td class="table-ranking__cell" data-label="GD">0</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="sports-article" class="page__articles articles">
+            <div class="articles__container">
+               <h2 class="articles__title title">Sports Article</h2>
+               <div class="articles__slider slider-articles swiper">
+                  <div class="slider-articles__wrapper swiper-wrapper">
+                     <div class="slider-articles__slide swiper-slide">
+                        <article class="item-articles">
+                           <a class="item-articles__link" href="#">
+                              <div class="item-articles__picture">
+                                 <div class="item-articles__label">Basketball</div>
+                                 <img class="item-articles__image" src="img/articles/pictures/basketball-equipment.webp" alt="basketball equipment on the floor in a dark room" loading="lazy">
+                              </div>
+                              <div class="item-articles__content">
+                                 <div class="item-articles__author author-articles">
+                                    <figure class="author-articles__picture">
+                                       <img class="author-articles__avatar" src="img/articles/avatars/avatar-1.webp" alt="" loading="lazy">
+                                    </figure>
+                                    <div class="author-articles__name">Jake Will</div>
+                                 </div>
+                                 <div class="item-articles__meta">
+                                    <time datetime="2023-06-04">04 June 2023</time>
+                                 </div>
+                                 <h3 class="item-articles__title">5 Exercises Basketball Players Should Be Using To Develop Strength</h3>
+                                 <div class="item-articles__text">
+                                    <p>This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-articles__slide swiper-slide">
+                        <article class="item-articles">
+                           <a class="item-articles__link" href="#">
+                              <div class="item-articles__picture">
+                                 <div class="item-articles__label">Hockey</div>
+                                 <img class="item-articles__image" src="img/articles/pictures/hockey-players.webp" alt="a hockey player scores a puck into the goal" loading="lazy">
+                              </div>
+                              <div class="item-articles__content">
+                                 <div class="item-articles__author author-articles">
+                                    <figure class="author-articles__picture">
+                                       <img class="author-articles__avatar" src="img/articles/avatars/avatar-2.webp" alt="" loading="lazy">
+                                    </figure>
+                                    <div class="author-articles__name">Foxi Zacon</div>
+                                 </div>
+                                 <div class="item-articles__meta">
+                                    <time datetime="2023-06-03">03 June 2023</time>
+                                 </div>
+                                 <h3 class="item-articles__title">Golden Knights out to fulfill owner's quest to win Stanley Cup in 6th year</h3>
+                                 <div class="item-articles__text">
+                                    <p>The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-articles__slide swiper-slide">
+                        <article class="item-articles">
+                           <a class="item-articles__link" href="#">
+                              <div class="item-articles__picture">
+                                 <div class="item-articles__label">badminton</div>
+                                 <img class="item-articles__image" src="img/articles/pictures/badminton-racquet.webp" alt="three white shuttlecocks on a bandminton racket" loading="lazy">
+                              </div>
+                              <div class="item-articles__content">
+                                 <div class="item-articles__author author-articles">
+                                    <figure class="author-articles__picture">
+                                       <img class="author-articles__avatar" src="img/articles/avatars/avatar-3.webp" alt="" loading="lazy">
+                                    </figure>
+                                    <div class="author-articles__name">Bong Lozada</div>
+                                 </div>
+                                 <div class="item-articles__meta">
+                                    <time datetime="2023-06-01">01 June 2023</time>
+                                 </div>
+                                 <h3 class="item-articles__title">‘Outdoor’ Badminton Gets Support From Local Federation</h3>
+                                 <div class="item-articles__text">
+                                    <p>The Badminton World Federation is developing Air Badminton and the country’s governing body, Philippine Badminton Association.</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                     <div class="slider-articles__slide swiper-slide">
+                        <article class="item-articles">
+                           <a class="item-articles__link" href="#">
+                              <div class="item-articles__picture">
+                                 <div class="item-articles__label">Hockey</div>
+                                 <img class="item-articles__image" src="img/articles/pictures/hockey-players.webp" alt="a hockey player scores a puck into the goal" loading="lazy">
+                              </div>
+                              <div class="item-articles__content">
+                                 <div class="item-articles__author author-articles">
+                                    <figure class="author-articles__picture">
+                                       <img class="author-articles__avatar" src="img/articles/avatars/avatar-2.webp" alt="" loading="lazy">
+                                    </figure>
+                                    <div class="author-articles__name">Foxi Zacon</div>
+                                 </div>
+                                 <div class="item-articles__meta">
+                                    <time datetime="2023-06-03">03 June 2023</time>
+                                 </div>
+                                 <h3 class="item-articles__title">Golden Knights out to fulfill owner's quest to win Stanley Cup in 6th year</h3>
+                                 <div class="item-articles__text">
+                                    <p>The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</p>
+                                 </div>
+                              </div>
+                           </a>
+                        </article>
+                     </div>
+                  </div>
+                  <div class="slider-arrows">
+                     <button class="slider-arrow slider-arrow--left  slider-arrow--icon-arrow" aria-label="Previous slide"></button>
+                     <button class="slider-arrow slider-arrow--right slider-arrow--icon-arrow" aria-label="Next slide"></button>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <aside class="subscribe">
+         <div class="subscribe__container">
+            <div class="subscribe__content">
+               <h3 class="subscribe__title">Newsletter Subscription</h3>
+               <form class="subscribe__form" action="#" method="get">
+                  <input class="subscribe__input" type="email" placeholder="shovon.khan0099@gmail.com" name="form[]" autocomplete="on" required>
+                  <button class="subscribe__button subscribe__button--icon-arrow" type="submit" aria-label="Newsletter Subscription"> </button>
+               </form>
+            </div>
+            <figure class="subscribe__picture">
+               <img class="subscribe__image" src="img/subscribe/subscribe-image.png" alt="An American football player poses with a brown ball" loading="lazy">
+            </figure>
+         </div>
+      </aside>
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__social social-footer">
+               <ul class="social-footer__list">
+                  <li class="social-footer__item">
+                     <a class="social-footer__link social-footer__link--icon-s-fb" href="#" aria-label="Facebook"></a>
+                  </li>
+                  <li class="social-footer__item">
+                     <a class="social-footer__link social-footer__link--icon-s-inst" href="#" aria-label="Instagram"></a>
+                  </li>
+                  <li class="social-footer__item">
+                     <a class="social-footer__link social-footer__link--icon-s-tw" href="#" aria-label="Twitter"></a>
+                  </li>
+               </ul>
+            </div>
+            <ul class="footer__pages pages">
+               <li class="pages__item">
+                  <a class="pages__link pages__link--icon-arrow" href="#"></a>
+               </li>
+               <li class="pages__item">
+                  <a class="pages__link pages__link--current" href="#">1</a>
+               </li>
+               <li class="pages__item">
+                  <a class="pages__link" href="#">2</a>
+               </li>
+               <li class="pages__item">
+                  <a class="pages__link" href="#">3</a>
+               </li>
+               <li class="pages__item">
+                  <a class="pages__link" href="#">4</a>
+               </li>
+               <li class="pages__item">
+                  <a class="pages__link pages__link--icon-arrow" href="#"></a>
+               </li>
+            </ul>
+         </div>
+      </footer>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

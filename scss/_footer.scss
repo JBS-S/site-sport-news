@@ -1,0 +1,155 @@
+@use "sass:math";
+@use "_mixins.scss" as *;
+
+//========================================================================================================================================
+.footer {
+   padding-block-end: toRem(80);
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: toRem(20);
+   }
+
+   &__social {
+   }
+
+   &__pages {
+   }
+}
+.social-footer {
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: toRem(21);
+   }
+
+   &__item {
+   }
+
+   &__link {
+      background-color: #262626;
+      border-radius: toRem(4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: toRem(50);
+      aspect-ratio: 1;
+      transition: background-color 0.4s ease;
+      &::before {
+         color: #fff;
+         font-size: toRem(25);
+         transform: translateZ(0) scale(1);
+         transform-origin: center;
+         will-change: transform;
+         transition:
+            transform 0.4s ease,
+            color 0.4s ease;
+      }
+   }
+
+   &__link--icon-s-fb {
+   }
+
+   &__link--icon-s-inst {
+   }
+
+   &__link--icon-s-tw {
+   }
+}
+.pages {
+   display: flex;
+   align-items: center;
+   gap: toRem(43);
+   &__item {
+      &:last-child {
+         rotate: 180deg;
+      }
+   }
+
+   &__link {
+      font-size: toRem(24);
+      padding: toRem(5);
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: rgba(38, 38, 38, 0.61);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      inline-size: toRem(35);
+      border-radius: 50%;
+      aspect-ratio: 1;
+      transition: color 0.4s ease;
+   }
+
+   &__link--icon-arrow {
+      border-radius: toRem(3);
+      background-color: #bab8b8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      inline-size: toRem(70);
+      aspect-ratio: 70 / 50;
+      transition: background-color 0.4s ease;
+      &::before {
+         font-size: toRem(15);
+         color: #fff;
+      }
+   }
+
+   &__link--current {
+      background-color: #262626;
+      color: #fff;
+   }
+}
+
+//========================================================================================================================================
+
+//========================================================================================================================================
+
+//========================================================================================================================================
+
+//========================================================================================================================================
+
+//========================================================================================================================================
+
+//========================================================================================================================================
+
+//====================================================================================================================================================
+
+@media (max-width: toEm($pc)) {
+}
+
+//========================================================================================================================================
+
+@media (max-width: toEm($tablet)) {
+}
+
+//========================================================================================================================================
+
+@media (max-width: toEm($mobile)) {
+   .footer {
+      &__container {
+         justify-content: center;
+      }
+   }
+}
+
+//========================================================================================================================================
+
+@media (max-width: toEm($mobileSmall)) {
+   .pages {
+      gap: toRem(2);
+      &__item {
+         &:first-child {
+            margin-inline-end: toRem(5);
+         }
+         &:last-child {
+            margin-inline-end: toRem(5);
+         }
+      }
+   }
+}
+
+//========================================================================================================================================

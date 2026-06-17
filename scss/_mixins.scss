@@ -1,0 +1,141 @@
+@use "sass:math";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1170;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$pc: $containerWidth; // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: 991.98; // Планшети, деякі телефони в горизонтальному положенні
+$mobile: 767.98; // Телефони L
+$mobileSmall: 479.98; // Телефони S
+
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;
+
+//Percent
+@function percent($px, $from: 100) {
+   $result: math.div($px, $from) * 100%;
+   @return $result;
+}
+
+//REM
+@function toRem($px, $current: 16) {
+   $result: math.div($px, $current) + rem;
+   @return $result;
+}
+
+//EM
+@function toEm($px, $current: 16) {
+   $result: math.div($px, $current) + em;
+   @return $result;
+}
+
+// Адаптивна властивість (clamp)
+@mixin adaptiveValue(
+   $property,
+   $startSize,
+   $minSize: $minSize,
+   $keepSize: 0,
+   $widthFrom: $containerWidth,
+   $widthTo: $minWidth
+) {
+   @if ($startSize==0) {
+      $startSize: 0.000001;
+   }
+
+   @if ($minSize==0) {
+      $minSize: 0.000001;
+   }
+
+   @if ($widthFrom ==$containerWidth and $maxWidthContainer ==0) {
+      $widthFrom: $maxWidth;
+   }
+
+   // Брейк-поїнти в EM
+   $widthFromMedia: toEm($widthFrom);
+   $widthToMedia: toEm($widthTo);
+
+   // Формула плаваючого значення
+   // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+   $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+   $yIntersection: -$widthTo * $slope + $minSize;
+
+   @if ($yIntersection==0) {
+      $yIntersection: 0.000001;
+   }
+
+   $flyValue: #{$yIntersection}px " + " #{$slope * 100}vw;
+
+   // Отримання значення властивості
+   $propertyValue: #{"clamp(" #{$minSize}px "," $flyValue "," #{$startSize}px ")"};
+
+   // Якщо негативні значення
+   @if ($minSize > $startSize) {
+      $propertyValue: #{"clamp(" #{$startSize}px "," $flyValue "," #{$minSize}px ")"};
+   }
+
+   // Встановлюємо значення за замовчуванням
+   @if $keepSize !=1 and $keepSize !=3 {
+      @media (min-width: $widthFromMedia) {
+         #{$property}: #{$startSize}px;
+      }
+   }
+
+   // Адаптуємо розмір у проміжку між зазначеними ширинами в'юпорту
+   @media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+      #{$property}: $propertyValue;
+   }
+
+   @if $keepSize !=1 and $keepSize !=2 {
+      @media (max-width: $widthToMedia) {
+         #{$property}: #{$minSize}px;
+      }
+   }
+}
+//========================================================================================================================================
+//  ~ ВАЖНО
+
+//  Стилі для пристроїв, що не підтримують наведення курсора
+// @media (any-hover: hover) {
+// }
+// @media (any-hover: hover) and (any-pointer: fine) {
+// }
+//  Основні медіа запити
+//  1199.98px
+// @media (max-width:  74.9988em) {
+// }
+//  991.98px
+// @media (max-width:  61.9988em) {
+// }
+//  767.98px
+// @media (max-width:  47.9988em) {
+// }
+//  479.98px
+// @media (max-width:  29.9988em) {
+// }
+//
+// Меняем фон на чёрный если в системе винды он чёрный
+// body {
+//    transition: all 0.3s ease 0s;
+//    background-color: #fff;
+//    color: #333;
+// }
+// @media (prefers-color-scheme: dark) {
+//    body {
+//       color: #fff;
+//       background-color: #333;
+//    }
+// }
+//========================================================================================================================================

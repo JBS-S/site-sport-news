@@ -1,0 +1,80 @@
+@use "sass:math";
+@use "_reset.scss";
+@use "_fonts.scss";
+@use "_iconfont.scss";
+@use "_mixins.scss" as *;
+@use "_hover.scss";
+// Parts
+@use "_components.scss";
+@use "_header.scss";
+@use "_footer.scss";
+// Pages
+@use "_home.scss";
+
+//========================================================================================================================================
+
+html {
+   scroll-behavior: smooth;
+}
+
+//========================================================================================================================================
+
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper > main {
+   flex-grow: 1;
+}
+
+//========================================================================================================================================
+
+[class*="__container"] {
+   max-width: toRem($containerWidth);
+   padding-inline: toRem(math.div($containerPadding, 2));
+   margin: 0 auto;
+}
+
+//========================================================================================================================================
+
+body {
+   font-family: "DM Sans", sans-serif;
+   font-weight: 500;
+   color: #262626;
+   background-color: #f9fafc;
+   &.scroll-lock {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+}
+
+.visually-hidden {
+   position: absolute;
+   inline-size: toRem(1);
+   block-size: toRem(1);
+   margin: toRem(-1);
+   padding: toRem(0);
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   white-space: nowrap;
+   border: 0;
+}
+
+section[id] {
+   scroll-margin-top: toRem(100);
+}
+//========================================================================================================================================
+@media (prefers-reduced-motion: reduce) {
+   html {
+      scroll-behavior: auto;
+   }
+}
+@media (max-width: toEm($tablet)) {
+   section[id] {
+      scroll-margin-top: toRem(150);
+   }
+}

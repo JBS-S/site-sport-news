@@ -1,0 +1,46 @@
+@font-face {
+   font-family: "iconfont";
+   src: url("../fonts/iconfonts/iconfont.woff2") format("woff2");
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+}
+
+[class*="--icon-"]::before {
+   content: "";
+   font-family: "iconfont" !important;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+//========================================================================================
+
+:root {
+   --icon-s-tw: "\f000";
+   --icon-s-inst: "\f001";
+   --icon-s-fb: "\f002";
+   --icon-search: "\f003";
+   --icon-arrow: "\f004";
+}
+
+[class*="--icon-s-tw"]:before {
+   content: var(--icon-s-tw);
+}
+[class*="--icon-s-inst"]:before {
+   content: var(--icon-s-inst);
+}
+[class*="--icon-s-fb"]:before {
+   content: var(--icon-s-fb);
+}
+[class*="--icon-search"]:before {
+   content: var(--icon-search);
+}
+[class*="--icon-arrow"]:before {
+   content: var(--icon-arrow);
+}
